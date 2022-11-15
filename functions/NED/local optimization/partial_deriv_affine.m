@@ -1,0 +1,22 @@
+function [It, Ipx, Ipy] = partial_deriv_affine(I1,I2,p,h)
+
+[H,W]   = size(I1);
+pt      = inverse_affine_param(p);
+[x,y]   = meshgrid(1:W,1:H);
+x_shift =  (1 + W)/2;
+y_shift =  (1 + H)/2;
+x       = x - x_shift;
+y       = y - y_shift;
+x2      = pt(1)*x + pt(2)*y + pt(3) + x_shift;
+y2      = pt(4)*x + pt(5)*y + pt(6) + y_shift;
+x       = x + x_shift;
+y       = y + y_shift;
+B       = (x2>W) | (x2<1) | (y2>H) | (y2<1);
+warpI2  = interp2(x,y,I2,x2,y2,'cubic');
+[I2x,I2y] = deriv_filt(I2,h);
+Ipx     = interp2(x,y,I2x,x2,y2,'cubic');
+Ipy     = interp2(x,y,I2y,x2,y2,'cubic');
+It      = warpI2 - I1;
+It(B)   = 0;
+Ipx(B)  = 0;
+Ipy(B)  = 0;
