@@ -10,9 +10,10 @@ The datasets are not included. You can download the datasets from :
 Then run demo.m 
 
 
-*[https://ieeexplore.ieee.org/abstract/document/9442904]
+paper: *[https://ieeexplore.ieee.org/abstract/document/9442904]
 
 If you find this code useful, please cite
+
 @article{ying2021unaligned,
   title={Unaligned hyperspectral image fusion via registration and interpolation modeling},
   author={Ying, Jiacheng and Shen, Hui-Liang and Cao, Si-Yuan},
