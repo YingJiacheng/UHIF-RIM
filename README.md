@@ -4,7 +4,10 @@
 This is official matlab code of ''[Unaligned hyperspectral image fusion via registration and interpolation modeling] IEEE Transactions on Geoscience and Remote Sensing, 2021, 60: 1-14.''
  
 
-run demo.m 
+The datasets are not included. You can download the datasets from :
+[链接：https://pan.baidu.com/s/1m-eM4CnSq22RG5iG6ytCFg   提取码：0ww1]
+
+Then run demo.m 
 
 
 *[https://ieeexplore.ieee.org/abstract/document/9442904]
