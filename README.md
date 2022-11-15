@@ -1,4 +1,4 @@
-# UHIF-EIM
+# UHIF-RIM
 
 
 This is official matlab code of ''[Unaligned hyperspectral image fusion via registration and interpolation modeling] IEEE Transactions on Geoscience and Remote Sensing, 2021, 60: 1-14.''
